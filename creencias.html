@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lo que creemos | Iglesia Luterana San Pablo</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- FontAwesome para íconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    :root {
+      --color-guinda: #8B1A32;
+      --color-guinda-oscuro: #5C1020;
+      --color-fondo: #f8f9fa;
+    }
+
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: var(--color-fondo); }
+
+    /* Navegación */
+    .navbar-custom { background-color: var(--color-guinda); box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
+    .navbar-custom .navbar-brand, .navbar-custom .nav-link { color: white !important; font-size: 1.1rem; }
+    .navbar-custom .nav-link:hover { color: #d1d1d1 !important; }
+    .navbar-logo { height: 65px; width: auto; object-fit: contain; }
+
+    /* Estilos para el menú desplegable en hover */
+    @media all and (min-width: 992px) {
+      .navbar .nav-item .dropdown-menu { display: none; }
+      .navbar .nav-item:hover .nav-link { color: #fff; }
+      .navbar .nav-item:hover .dropdown-menu { display: block; margin-top: 0; }
+      .navbar .nav-item .dropdown-menu { margin-top: 0; }
+    }
+    /* Estilos del Dropdown */
+    .dropdown-menu { background-color: var(--color-guinda-oscuro); border: none; }
+    .dropdown-item { color: white; }
+    .dropdown-item:hover, .dropdown-item:focus { background-color: var(--color-guinda); color: white; }
+
+    /* Header de la página interna */
+    .page-header {
+      background-color: var(--color-guinda-oscuro);
+      color: white;
+      padding: 80px 0 60px 0;
+      text-align: center;
+    }
+
+    /* Estilos de texto y tarjetas */
+    .text-guinda { color: var(--color-guinda); }
+    .sola-card { border-left: 5px solid var(--color-guinda); background-color: white; padding: 25px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); height: 100%;}
+
+    footer { background-color: #212529; color: #adb5bd; }
+  </style>
+</head>
+<body>
+
+<!-- Menú de Navegación -->
+<nav class="navbar navbar-expand-lg navbar-custom sticky-top py-3">
+  <div class="container">
+    <a class="navbar-brand fw-bold d-flex align-items-center" href="index.html">
+      <img src="https://i0.wp.com/sinodoluteranodemexico.org/wp-content/uploads/2023/09/foto-73.png?fit=6912%2C3456&ssl=1" alt="Logo Sínodo Luterano de México" class="navbar-logo me-3 bg-white rounded p-1">
+      Iglesia Luterana<br>San Pablo
+    </a>
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="fa-solid fa-bars text-white fs-3"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+
+        <!-- Menú Desplegable Nuestra Fe -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle fw-bold" href="#" id="navbarDropdownFe" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Nuestra Fe
+          </a>
+          <ul class="dropdown-menu shadow" aria-labelledby="navbarDropdownFe">
+            <li><a class="dropdown-item fw-bold" href="creencias.html">Lo que creemos</a></li>
+            <li><a class="dropdown-item" href="credos.html">Credos</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item"><a class="nav-link" href="index.html#horarios">Horarios</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#contacto">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Header de la página -->
+<header class="page-header">
+  <div class="container">
+    <h1 class="display-5 fw-bold">Lo que creemos y confesamos</h1>
+    <p class="lead mt-3">Nuestra fe está anclada en Cristo, fundamentada en la Biblia y expresada en las Confesiones Luteranas.</p>
+  </div>
+</header>
+
+<!-- Contenido Principal -->
+<main class="container py-5">
+
+  <!-- Las Tres Solas -->
+  <div class="row mb-5 g-4">
+    <div class="col-12 text-center mb-4">
+      <h2 class="text-guinda fw-bold">Los Pilares de Nuestra Fe</h2>
+      <p class="text-muted">Como cristianos y luteranos, resumimos nuestra fe en tres principios fundamentales de la Reforma:</p>
+    </div>
+    <div class="col-md-4">
+      <div class="sola-card">
+        <h3 class="fw-bold"><i class="fa-solid fa-gift text-guinda me-2"></i>Sola Gracia</h3>
+        <p class="mt-3 text-muted">Creemos que el ser humano no puede salvarse a sí mismo ni ganar el favor de Dios mediante buenas obras. Somos salvados y justificados libremente, como un regalo (gracia) inmerecido, debido a la obra y sacrificio de Jesucristo en la cruz.</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="sola-card">
+        <h3 class="fw-bold"><i class="fa-solid fa-dove text-guinda me-2"></i>Sola Fe</h3>
+        <p class="mt-3 text-muted">Creemos que el perdón y la salvación ganados por Cristo se reciben únicamente a través de la fe. El Espíritu Santo crea esta fe en nosotros mediante la Palabra de Dios y los Sacramentos, permitiéndonos confiar plenamente en las promesas divinas.</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="sola-card">
+        <h3 class="fw-bold"><i class="fa-solid fa-book-open text-guinda me-2"></i>Sola Escritura</h3>
+        <p class="mt-3 text-muted">Creemos que la Biblia es la Palabra inspirada, inerrante e infalible de Dios. Es la única fuente, norma y regla verdadera a través de la cual se debe juzgar toda doctrina, teología y práctica en la Iglesia.</p>
+      </div>
+    </div>
+  </div>
+
+  <hr class="my-5">
+
+  <!-- Los Medios de Gracia (Sacramentos) -->
+  <div class="row align-items-center mb-5">
+    <div class="col-lg-6 mb-4 mb-lg-0">
+      <h2 class="text-guinda fw-bold">Los Medios de Gracia</h2>
+      <p class="text-muted">Dios nos entrega su gracia y perdón no de forma invisible, sino a través de medios tangibles que Él mismo instituyó: La Palabra (leída y predicada) y los Sacramentos.</p>
+
+      <h4 class="fw-bold mt-4">El Santo Bautismo</h4>
+      <p class="text-muted">No es solo agua, sino agua unida a la Palabra de Dios. Creemos que el Bautismo obra el perdón de los pecados, rescata de la muerte y otorga la salvación eterna (1 Pedro 3:21). Por ello, también bautizamos a los niños, quienes necesitan la gracia de Dios.</p>
+
+      <h4 class="fw-bold mt-4">La Santa Cena</h4>
+      <p class="text-muted">Creemos en la <em>Presencia Real</em>. Bajo las formas del pan y del vino, recibimos el verdadero cuerpo y la verdadera sangre de nuestro Señor Jesucristo para el perdón de los pecados, la vida y la salvación, tal como Él lo instituyó.</p>
+    </div>
+    <div class="col-lg-6 text-center">
+      <!-- Se puede reemplazar esta imagen por una foto real del altar o pila bautismal de la iglesia -->
+      <img src="https://images.unsplash.com/photo-1601142634808-38923eb7c560?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Santa Cena" class="img-fluid rounded shadow-sm">
+    </div>
+  </div>
+
+  <hr class="my-5">
+
+  <!-- Identidad Confesional -->
+  <div class="row">
+    <div class="col-12">
+      <div class="bg-light p-5 rounded">
+        <h2 class="text-guinda fw-bold text-center mb-4">Nuestra Identidad Confesional</h2>
+        <p class="text-center text-muted lead mb-4">"Suscribimos al Libro de Concordia porque concuerda con las Escrituras"</p>
+        <p class="text-muted text-center mx-auto" style="max-width: 800px;">
+          Como Iglesia Luterana Confesional, nos adherimos a las confesiones de fe reunidas en el <strong>Libro de Concordia de 1580</strong>, incluyendo los credos ecuménicos (Apostólico, Niceno y Atanasiano), la Confesión de Augsburgo y el Catecismo Menor de Martín Lutero. No consideramos estos documentos como una adición a la Biblia, sino como una exposición fiel y verdadera de lo que la Palabra de Dios enseña.
+        </p>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<!-- Footer -->
+<footer class="py-4 text-center mt-5">
+  <div class="container">
+    <p class="mb-0">&copy; 2026 Iglesia Luterana San Pablo. Todos los derechos reservados.</p>
+    <small>Miembro del Sínodo Luterano de México.</small>
+  </div>
+</footer>
+
+<!-- Bootstrap 5 JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
