@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clases para Niños | Iglesia Luterana San Pablo</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- FontAwesome para íconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    :root {
+      --color-guinda: #8B1A32;
+      --color-guinda-oscuro: #5C1020;
+      --color-fondo: #f8f9fa;
+    }
+
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: var(--color-fondo); }
+
+    /* Navegación */
+    .navbar-custom { background-color: var(--color-guinda); box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
+    .navbar-custom .navbar-brand, .navbar-custom .nav-link { color: white !important; font-size: 1.1rem; }
+    .navbar-custom .nav-link:hover { color: #d1d1d1 !important; }
+    .navbar-logo { height: 65px; width: auto; object-fit: contain; }
+
+    /* Estilos para el menú desplegable en hover */
+    @media all and (min-width: 992px) {
+      .navbar .nav-item .dropdown-menu { display: none; }
+      .navbar .nav-item:hover .nav-link { color: #fff; }
+      .navbar .nav-item:hover .dropdown-menu { display: block; margin-top: 0; }
+      .navbar .nav-item .dropdown-menu { margin-top: 0; }
+    }
+    .dropdown-menu { background-color: var(--color-guinda-oscuro); border: none; }
+    .dropdown-item { color: white; }
+    .dropdown-item:hover, .dropdown-item:focus { background-color: var(--color-guinda); color: white; }
+
+    /* Header de la página interna con imagen de fondo */
+    .hero-section-kids {
+      background: linear-gradient(rgba(139, 26, 50, 0.85), rgba(0, 0, 0, 0.7)),
+      url('https://i.imgur.com/AmLXA4K.png') center/cover no-repeat;
+      color: white;
+      padding: 120px 0;
+      text-align: center;
+    }
+
+    /* Utilidades de texto y tarjetas */
+    .text-guinda { color: var(--color-guinda); }
+    .bg-guinda-light { background-color: rgba(139, 26, 50, 0.05); }
+
+    .activity-card {
+      border: none;
+      border-radius: 12px;
+      transition: transform 0.3s;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+      height: 100%;
+    }
+    .activity-card:hover { transform: translateY(-5px); }
+    .icon-circle {
+      width: 70px;
+      height: 70px;
+      background-color: var(--color-guinda);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      margin: 0 auto 15px auto;
+    }
+
+    /* Estilo para los placeholders de fotos */
+    .photo-placeholder {
+      height: 280px;
+      background-color: #dee2e6;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #6c757d;
+      border-top-left-radius: calc(0.375rem - 1px);
+      border-top-right-radius: calc(0.375rem - 1px);
+    }
+
+    footer { background-color: #212529; color: #adb5bd; }
+  </style>
+</head>
+<body>
+
+<!-- Menú de Navegación -->
+<nav class="navbar navbar-expand-lg navbar-custom sticky-top py-3">
+  <div class="container">
+    <a class="navbar-brand fw-bold d-flex align-items-center" href="index.html">
+      <img src="https://i0.wp.com/sinodoluteranodemexico.org/wp-content/uploads/2023/09/foto-73.png?fit=6912%2C3456&ssl=1" alt="Logo Sínodo Luterano de México" class="navbar-logo me-3 bg-white rounded p-1">
+      Iglesia Luterana<br>San Pablo
+    </a>
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="fa-solid fa-bars text-white fs-3"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+
+        <!-- Menú Desplegable Nuestra Fe -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownFe" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Nuestra Fe
+          </a>
+          <ul class="dropdown-menu shadow" aria-labelledby="navbarDropdownFe">
+            <li><a class="dropdown-item" href="creencias.html">Lo que creemos</a></li>
+            <li><a class="dropdown-item" href="credos.html">Credos</a></li>
+            <li><a class="dropdown-item" href="catecismo.html">Catecismo Menor</a></li>
+          </ul>
+        </li>
+
+        <!-- Menú Desplegable Actividades -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownAct" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Actividades
+          </a>
+          <ul class="dropdown-menu shadow" aria-labelledby="navbarDropdownAct">
+            <li><a class="dropdown-item" href="clases-ninos.html">Clases para niños</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item"><a class="nav-link" href="index.html#horarios">Horarios</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#contacto">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Header de la página -->
+<header class="hero-section-kids">
+  <div class="container">
+    <h1 class="display-4 fw-bold mb-4">Clases para Niños</h1>
+    <p class="lead mb-0">Un espacio dedicado a aprender, jugar y crecer en la Palabra de Dios.</p>
+  </div>
+</header>
+
+<!-- Contenido Principal -->
+<main>
+
+  <!-- Detalles de la Clase -->
+  <section class="py-5">
+    <div class="container py-4">
+      <div class="row justify-content-center text-center mb-5">
+        <div class="col-lg-8">
+          <h2 class="text-guinda fw-bold mb-4">Sábados a las 10:00 AM</h2>
+          <p class="fs-5 text-muted">Invitamos a todos los niños a ser parte de nuestra comunidad de aprendizaje. Hemos preparado una mañana muy especial donde combinamos la enseñanza bíblica con actividades divertidas y tiempo de calidad.</p>
+
+          <div class="alert alert-success d-inline-block mt-3 fs-5 shadow-sm">
+            <i class="fa-solid fa-circle-check me-2"></i> ¡Esta actividad es <strong>completamente gratuita</strong>!
+          </div>
+        </div>
+      </div>
+
+      <!-- Elementos de la clase -->
+      <div class="row g-4 mt-2 text-center">
+        <div class="col-md-3 col-sm-6">
+          <div class="card activity-card card-body p-4">
+            <div class="icon-circle"><i class="fa-solid fa-book-bible"></i></div>
+            <h4 class="fw-bold text-guinda">Clase Bíblica</h4>
+            <p class="text-muted mb-0">Enseñanzas centradas en Cristo e historias bíblicas adaptadas a su edad.</p>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="card activity-card card-body p-4">
+            <div class="icon-circle"><i class="fa-solid fa-mug-hot"></i></div>
+            <h4 class="fw-bold text-guinda">Desayuno</h4>
+            <p class="text-muted mb-0">Compartimos un delicioso y nutritivo desayuno juntos cada sábado.</p>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="card activity-card card-body p-4">
+            <div class="icon-circle"><i class="fa-solid fa-puzzle-piece"></i></div>
+            <h4 class="fw-bold text-guinda">Juegos</h4>
+            <p class="text-muted mb-0">Dinámicas y actividades lúdicas para fomentar la alegría y el compañerismo.</p>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="card activity-card card-body p-4">
+            <div class="icon-circle"><i class="fa-solid fa-face-smile"></i></div>
+            <h4 class="fw-bold text-guinda">Convivencia</h4>
+            <p class="text-muted mb-0">Un ambiente seguro para hacer nuevos amigos e interactuar en comunidad.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección de Maestras -->
+  <section class="py-5 bg-guinda-light">
+    <div class="container py-4">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold text-guinda">Conoce a nuestras Maestras</h2>
+        <p class="text-muted fs-5">Contamos con personal preparado y dedicado para instruir a los pequeños.</p>
+      </div>
+
+      <div class="row justify-content-center g-5">
+        <!-- Maestra 1 -->
+        <div class="col-md-5 col-lg-4">
+          <div class="card shadow-sm border-0 h-100">
+            <!-- Placeholder de Foto -->
+            <div class="photo-placeholder">
+              <i class="fa-solid fa-camera fa-3x mb-2"></i>
+              <span>Espacio para foto</span>
+            </div>
+            <!-- Para reemplazar la foto en el futuro, comenta o borra el div 'photo-placeholder' de arriba y usa esta etiqueta de imagen:
+            <img src="ruta/a/la/foto_daniela.jpg" class="card-img-top" alt="Diaconisa Daniela Huerta García">
+            -->
+            <div class="card-body text-center p-4">
+              <h4 class="card-title fw-bold">Daniela Huerta García</h4>
+              <h6 class="text-guinda fw-bold mb-3">Diaconisa</h6>
+              <p class="card-text text-muted">Maestra del grupo de adolecentes</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Maestra 2 -->
+        <div class="col-md-5 col-lg-4">
+          <div class="card shadow-sm border-0 h-100">
+            <!-- Placeholder de Foto -->
+            <div class="photo-placeholder">
+              <i class="fa-solid fa-camera fa-3x mb-2"></i>
+              <span>Espacio para foto</span>
+            </div>
+            <!-- Para reemplazar la foto en el futuro, comenta o borra el div 'photo-placeholder' de arriba y usa esta etiqueta de imagen:
+            <img src="ruta/a/la/foto_paulina.jpg" class="card-img-top" alt="Graduada Paulina Huerta García">
+            -->
+            <div class="card-body text-center p-4">
+              <h4 class="card-title fw-bold">Paulina Huerta García</h4>
+              <h6 class="text-guinda fw-bold mb-3">Graduada de diaconía</h6>
+              <p class="card-text text-muted">Maestra del grupo de niños pequeños</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Botón de contacto -->
+      <div class="text-center mt-5">
+        <p class="text-muted mb-3">¿Tienes alguna duda o quieres registrar a tu hijo?</p>
+        <a href="index.html#contacto" class="btn btn-guinda btn-lg px-5">Contáctanos</a>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<!-- Footer -->
+<footer class="py-4 text-center">
+  <div class="container">
+    <p class="mb-0">&copy; 2026 Iglesia Luterana San Pablo. Todos los derechos reservados.</p>
+    <small>Miembro del Sínodo Luterano de México.</small>
+  </div>
+</footer>
+
+<!-- Bootstrap 5 JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
