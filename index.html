@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Credos Ecuménicos | Iglesia Luterana San Pablo</title>
+    <title>Iglesia Luterana San Pablo | CDMX</title>
 
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -19,7 +19,6 @@
 
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: var(--color-fondo); }
 
-        /* Navegación */
         .navbar-custom { background-color: var(--color-guinda); box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
         .navbar-custom .navbar-brand, .navbar-custom .nav-link { color: white !important; font-size: 1.1rem; }
         .navbar-custom .nav-link:hover { color: #d1d1d1 !important; }
@@ -37,23 +36,23 @@
         .dropdown-item { color: white; }
         .dropdown-item:hover, .dropdown-item:focus { background-color: var(--color-guinda); color: white; }
 
-        /* Header de la página interna */
-        .page-header {
-            background-color: var(--color-guinda-oscuro);
-            color: white;
-            padding: 80px 0 60px 0;
-            text-align: center;
+        .hero-section {
+            background: linear-gradient(rgba(139, 26, 50, 0.85), rgba(0, 0, 0, 0.7)),
+            url('https://i.imgur.com/UzYYJvW.jpeg') center/cover no-repeat;
+            color: white; padding: 120px 0; text-align: center;
         }
 
-        /* Estilos de texto y acordiones */
+        .btn-guinda { background-color: var(--color-guinda); color: white; border: none; }
+        .btn-guinda:hover { background-color: var(--color-guinda-oscuro); color: white; }
+        .btn-outline-guinda { color: var(--color-guinda); border-color: var(--color-guinda); }
+        .btn-outline-guinda:hover { background-color: var(--color-guinda); color: white; }
+        .btn-outline-light:hover { color: var(--color-guinda); }
+
         .text-guinda { color: var(--color-guinda); }
-        .accordion-button:not(.collapsed) {
-            color: var(--color-guinda-oscuro);
-            background-color: rgba(139, 26, 50, 0.1);
-            font-weight: bold;
-        }
-        .accordion-button:focus { box-shadow: none; border-color: rgba(0,0,0,.125); }
-        .credo-text { font-size: 1.1rem; line-height: 1.8; color: #495057; }
+
+        .info-card { border: none; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s ease; }
+        .info-card:hover { transform: translateY(-5px); }
+        .icon-large { font-size: 2.5rem; color: var(--color-guinda); margin-bottom: 15px; }
 
         footer { background-color: #212529; color: #adb5bd; }
     </style>
@@ -76,13 +75,13 @@
 
                 <!-- Menú Desplegable Nuestra Fe -->
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle fw-bold" href="#" id="navbarDropdownFe" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownFe" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Nuestra Fe
                     </a>
                     <ul class="dropdown-menu shadow" aria-labelledby="navbarDropdownFe">
                         <li><a class="dropdown-item" href="creencias.html">Lo que creemos</a></li>
-                        <li><a class="dropdown-item fw-bold" href="credos.html">Credos</a></li>
-                        <li><a class="dropdown-item fw-bold" href="catecismo.html">Catecismo menor</a></li>
+                        <li><a class="dropdown-item" href="credos.html">Credos</a></li>
+                        <li><a class="dropdown-item" href="catecismo.html">Catecismo Menor</a></li>
                     </ul>
                 </li>
 
@@ -93,101 +92,90 @@
     </div>
 </nav>
 
-<!-- Header de la página -->
-<header class="page-header">
+<!-- Sección Hero -->
+<section id="inicio" class="hero-section">
     <div class="container">
-        <h1 class="display-5 fw-bold">Los Credos Ecuménicos</h1>
-        <p class="lead mt-3">Confesamos la fe histórica de la Iglesia Cristiana a través de los tres credos universales.</p>
+        <h1 class="display-4 fw-bold mb-4">Bienvenidos a la Iglesia Luterana San Pablo</h1>
+        <p class="lead mb-5">Una iglesia luterana confesional en el corazón de la Ciudad de México.</p>
+        <a href="index.html#contacto" class="btn btn-outline-light btn-lg px-4 me-3">Visítanos</a>
+        <a href="index.html#horarios" class="btn btn-guinda btn-lg px-4">Nuestros Horarios</a>
     </div>
-</header>
+</section>
 
-<!-- Contenido Principal -->
-<main class="container py-5">
-    <div class="row justify-content-center">
-        <div class="col-lg-10">
-            <p class="text-center text-muted mb-5">
-                Como iglesia luterana, nos unimos a la Iglesia Cristiana de todos los tiempos y lugares al confesar nuestra fe utilizando los Credos Ecuménicos. Estos credos no son un reemplazo de la Biblia, sino un resumen fiel de lo que la Palabra de Dios enseña, formulados históricamente para defender la verdad contra las falsas enseñanzas.
-            </p>
-
-            <!-- Acordeón de Credos -->
-            <div class="accordion shadow-sm" id="accordionCredos">
-
-                <!-- Credo Apostólico -->
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingApostolico">
-                        <button class="accordion-button fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapseApostolico" aria-expanded="true" aria-controls="collapseApostolico">
-                            El Credo Apostólico
-                        </button>
-                    </h2>
-                    <div id="collapseApostolico" class="accordion-collapse collapse show" aria-labelledby="headingApostolico" data-bs-parent="#accordionCredos">
-                        <div class="accordion-body p-4 bg-light">
-                            <p class="text-muted mb-3 fst-italic">El Credo Apostólico es la confesión bautismal básica de la Iglesia.</p>
-                            <div class="credo-text">
-                                <p>Creo en Dios Padre Todopoderoso, Creador del cielo y de la tierra.</p>
-                                <p>Y en Jesucristo, su único Hijo, nuestro Señor; que fue concebido por obra del Espíritu Santo, nació de la virgen María; padeció bajo el poder de Poncio Pilatos, fue crucificado, muerto y sepultado; descendió a los infiernos; al tercer día resucitó de entre los muertos; subió a los cielos, y está sentado a la diestra de Dios Padre Todopoderoso; y desde allí ha de venir a juzgar a los vivos y a los muertos.</p>
-                                <p>Creo en el Espíritu Santo; la santa Iglesia cristiana, la comunión de los santos; el perdón de los pecados; la resurrección de la carne; y la vida perdurable. Amén.</p>
-                            </div>
-                        </div>
+<!-- Sección de Información -->
+<section class="py-5">
+    <div class="container py-4">
+        <div class="row g-4 text-center">
+            <!-- Misión / Fe -->
+            <div class="col-md-4">
+                <div class="card info-card h-100 p-4">
+                    <div class="card-body d-flex flex-column">
+                        <i class="fa-solid fa-book-bible icon-large"></i>
+                        <h4 class="card-title text-guinda fw-bold">Nuestra Fe</h4>
+                        <p class="card-text text-muted flex-grow-1">Somos una iglesia luterana confesional. Creemos que somos salvos únicamente por la Gracia de Dios, mediante la Fe en Jesucristo, según lo revelado en las Sagradas Escrituras.</p>
+                        <a href="creencias.html" class="btn btn-outline-guinda mt-3">Lo que creemos</a>
                     </div>
                 </div>
-
-                <!-- Credo Niceno -->
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingNiceno">
-                        <button class="accordion-button collapsed fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNiceno" aria-expanded="false" aria-controls="collapseNiceno">
-                            El Credo Niceno
-                        </button>
-                    </h2>
-                    <div id="collapseNiceno" class="accordion-collapse collapse" aria-labelledby="headingNiceno" data-bs-parent="#accordionCredos">
-                        <div class="accordion-body p-4 bg-light">
-                            <p class="text-muted mb-3 fst-italic">Formulado en los concilios de Nicea (325 d.C.) y Constantinopla (381 d.C.) para confesar la plena deidad de Cristo.</p>
-                            <div class="credo-text">
-                                <p>Creo en un solo Dios, Padre Todopoderoso, Creador del cielo y de la tierra, y de todo lo visible y lo invisible.</p>
-                                <p>Y en un solo Señor Jesucristo, Hijo unigénito de Dios, engendrado del Padre antes de todos los siglos; Dios de Dios, Luz de Luz, verdadero Dios de verdadero Dios, engendrado y no hecho; consustancial con el Padre, y por quien todas las cosas fueron hechas; el cual por amor a nosotros y por nuestra salvación descendió del cielo y, encarnado en la virgen María el Espíritu Santo, fue hecho hombre; y fue crucificado por nosotros bajo el poder de Poncio Pilatos; padeció y fue sepultado; y resucito al tercer día según las Escrituras; ascendió a los cielos, y está sentado a la diestra del Padre; y vendrá otra vez en gloria a juzgar a los vivos y a los muertos; y su reino no tendrá fin.</p>
-                                <p>Y creo en el Espíritu Santo, Señor y Dador de vida, que procede del Padre y del Hijo, que con el Padre y el Hijo juntamente es adorado y glorificado, que habló por los profetas. Y creo en una santa Iglesia cristiana y apostólica. Confieso un solo Bautismo para la remisión de los pecados. Espero la resurrección de los muertos, y la vida del mundo venidero. Amén.</p>
-                            </div>
-                        </div>
+            </div>
+            <!-- Horarios -->
+            <div id="horarios" class="col-md-4">
+                <div class="card info-card h-100 p-4">
+                    <div class="card-body">
+                        <i class="fa-regular fa-clock icon-large"></i>
+                        <h4 class="card-title text-guinda fw-bold">Horarios</h4>
+                        <ul class="list-unstyled text-muted mt-3">
+                            <li><strong>Sábados:</strong> Abierto a partir de las 10:00 a.m.</li>
+                            <li><strong>Domingos:</strong> Servicio divino a las 11:30</li>
+                        </ul>
                     </div>
                 </div>
-
-                <!-- Credo Atanasiano -->
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingAtanasiano">
-                        <button class="accordion-button collapsed fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAtanasiano" aria-expanded="false" aria-controls="collapseAtanasiano">
-                            El Credo Atanasiano
-                        </button>
-                    </h2>
-                    <div id="collapseAtanasiano" class="accordion-collapse collapse" aria-labelledby="headingAtanasiano" data-bs-parent="#accordionCredos">
-                        <div class="accordion-body p-4 bg-light">
-                            <p class="text-muted mb-3 fst-italic">Una confesión detallada de la doctrina de la Santa Trinidad y la encarnación de Cristo. Por su longitud, a menudo se confiesa en el Domingo de la Santísima Trinidad.</p>
-                            <div class="credo-text" style="font-size: 0.95rem;">
-                                <p>Todo el que quiera salvarse debe, ante todo, sostener la fe católica (universal). Quien no la guarde íntegra y pura, sin duda perecerá eternamente.</p>
-                                <p>Y la fe católica es ésta: que adoremos a un solo Dios en la Trinidad, y a la Trinidad en la unidad; sin confundir las personas, ni dividir la sustancia. Porque una es la persona del Padre, otra la del Hijo, y otra la del Espíritu Santo. Pero la divinidad del Padre, del Hijo y del Espíritu Santo es toda una, igual su gloria y coeterna su majestad.</p>
-                                <p>Cual es el Padre, tal es el Hijo, y tal el Espíritu Santo. Increado es el Padre, increado el Hijo, increado el Espíritu Santo. Inmenso es el Padre, inmenso el Hijo, inmenso el Espíritu Santo. Eterno es el Padre, eterno el Hijo, eterno el Espíritu Santo. Y, sin embargo, no son tres eternos, sino un solo eterno; como no son tres increados, ni tres inmensos, sino un increado y un inmenso. Igualmente, omnipotente es el Padre, omnipotente el Hijo, omnipotente el Espíritu Santo. Y, sin embargo, no son tres omnipotentes, sino un omnipotente. Así, Dios es el Padre, Dios el Hijo, Dios el Espíritu Santo. Y, sin embargo, no son tres dioses, sino un solo Dios.</p>
-                                <p>Así, Señor es el Padre, Señor el Hijo, Señor el Espíritu Santo. Y, sin embargo, no son tres señores, sino un solo Señor. Porque así como la verdad cristiana nos obliga a confesar a cada persona por sí misma como Dios y Señor, así la religión católica (universal) nos prohíbe decir que hay tres dioses o tres señores.</p>
-                                <p>El Padre por nadie ha sido hecho, ni creado, ni engendrado. El Hijo es solo del Padre; no hecho, ni creado, sino engendrado. El Espíritu Santo es del Padre y del Hijo; no hecho, ni creado, ni engendrado, sino procedente. Hay, pues, un solo Padre, no tres padres; un solo Hijo, no tres hijos; un solo Espíritu Santo, no tres espíritus santos. Y en esta Trinidad nada es antes o después, nada mayor o menor; sino que las tres personas son coeternas y coiguales entre sí. De modo que en todo, como se ha dicho, hay que adorar a la Unidad en la Trinidad y a la Trinidad en la Unidad. El que, pues, quiera salvarse, debe pensar así de la Trinidad.</p>
-                                <p>Además, es necesario para la salvación eterna creer fielmente la encarnación de nuestro Señor Jesucristo. Porque la fe verdadera consiste en creer y confesar que nuestro Señor Jesucristo, el Hijo de Dios, es Dios y hombre. Es Dios de la sustancia del Padre, engendrado antes de los siglos; y es hombre de la sustancia de su madre, nacido en el tiempo. Perfecto Dios y perfecto hombre: subsistente de alma racional y carne humana. Igual al Padre, según su divinidad; menor que el Padre, según su humanidad. Quien, aunque es Dios y hombre, no es dos, sino un solo Cristo. Uno, no por la conversión de la divinidad en carne, sino por la asunción de la humanidad en Dios. Uno de todo punto, no por confusión de sustancia, sino por unidad de persona. Porque así como el alma racional y la carne son un solo hombre, así Dios y el hombre son un solo Cristo.</p>
-                                <p>El cual padeció por nuestra salvación, descendió a los infiernos, resucitó al tercer día de entre los muertos. Subió a los cielos, está sentado a la diestra de Dios Padre Todopoderoso; de allí ha de venir a juzgar a los vivos y a los muertos. A su venida todos los hombres tendrán que resucitar con sus cuerpos, y darán cuenta de sus propios actos. Y los que hubieren hecho el bien irán a la vida eterna; y los que hubieren hecho el mal, al fuego eterno.</p>
-                                <p>Esta es la fe católica; el que no la crea fiel y firmemente, no podrá salvarse.</p>
-                            </div>
-                        </div>
+            </div>
+            <!-- Comunidad -->
+            <div class="col-md-4">
+                <div class="card info-card h-100 p-4">
+                    <div class="card-body">
+                        <i class="fa-solid fa-hands-holding-child icon-large"></i>
+                        <h4 class="card-title text-guinda fw-bold">Comunidad</h4>
+                        <p class="card-text text-muted">Un lugar para recibir los Dones de Dios y crecer juntos espiritualmente. Las puertas de San Pablo están abiertas para ti y tu familia.</p>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
-</main>
+</section>
+
+<!-- Sección de Contacto y Mapa -->
+<section id="contacto" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center text-guinda fw-bold mb-5">Encuéntranos</h2>
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-5">
+                <div class="mb-4">
+                    <h5 class="fw-bold"><i class="fa-solid fa-location-dot text-guinda me-2"></i> Dirección</h5>
+                    <p class="text-muted ms-4">Dr. Atl 187, Sta María la Ribera,<br>Cuauhtémoc, 06400<br>Ciudad de México, CDMX</p>
+                </div>
+                <div class="mb-4">
+                    <h5 class="fw-bold"><i class="fa-solid fa-phone text-guinda me-2"></i> Teléfono</h5>
+                    <p class="text-muted ms-4"><a href="tel:+525526301640" class="text-decoration-none text-muted">55 2630 1640</a></p>
+                </div>
+            </div>
+            <div class="col-lg-7">
+                <div class="ratio ratio-16x9 rounded shadow-sm overflow-hidden">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.339678399587!2d-99.16279992388046!3d19.452656940422964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f8d488e0b605%3A0xa642137cf99ed5f7!2sDr.%20Atl%20187%2C%20Sta%20Mar%C3%ADa%20la%20Ribera%2C%20Cuauht%C3%A9moc%2C%2006400%20Ciudad%20de%20M%C3%A9xico%2C%20CDMX!5e0!3m2!1ses-419!2smx!4v1700000000000!5m2!1ses-419!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 <!-- Footer -->
-<footer class="py-4 text-center mt-5">
+<footer class="py-4 text-center">
     <div class="container">
         <p class="mb-0">&copy; 2026 Iglesia Luterana San Pablo. Todos los derechos reservados.</p>
         <small>Miembro del Sínodo Luterano de México.</small>
     </div>
 </footer>
 
-<!-- Bootstrap 5 JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
