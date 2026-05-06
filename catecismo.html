@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catecismo Menor | Iglesia Luterana San Pablo</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- FontAwesome para íconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    :root {
+      --color-guinda: #8B1A32;
+      --color-guinda-oscuro: #5C1020;
+      --color-fondo: #f8f9fa;
+    }
+
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: var(--color-fondo); }
+
+    /* Navegación */
+    .navbar-custom { background-color: var(--color-guinda); box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
+    .navbar-custom .navbar-brand, .navbar-custom .nav-link { color: white !important; font-size: 1.1rem; }
+    .navbar-custom .nav-link:hover { color: #d1d1d1 !important; }
+    .navbar-logo { height: 65px; width: auto; object-fit: contain; }
+
+    /* Estilos para el menú desplegable en hover */
+    @media all and (min-width: 992px) {
+      .navbar .nav-item .dropdown-menu { display: none; }
+      .navbar .nav-item:hover .nav-link { color: #fff; }
+      .navbar .nav-item:hover .dropdown-menu { display: block; margin-top: 0; }
+      .navbar .nav-item .dropdown-menu { margin-top: 0; }
+    }
+    .dropdown-menu { background-color: var(--color-guinda-oscuro); border: none; }
+    .dropdown-item { color: white; }
+    .dropdown-item:hover, .dropdown-item:focus { background-color: var(--color-guinda); color: white; }
+
+    /* Header de la página interna */
+    .page-header {
+      background-color: var(--color-guinda-oscuro);
+      color: white;
+      padding: 80px 0 60px 0;
+      text-align: center;
+    }
+
+    /* Estilos de texto y acordiones */
+    .text-guinda { color: var(--color-guinda); }
+    .accordion-button:not(.collapsed) {
+      color: var(--color-guinda-oscuro);
+      background-color: rgba(139, 26, 50, 0.1);
+      font-weight: bold;
+    }
+    .accordion-button:focus { box-shadow: none; border-color: rgba(0,0,0,.125); }
+
+    .catecismo-q { color: var(--color-guinda); font-weight: bold; margin-top: 1.5rem; }
+    .catecismo-a { color: #495057; line-height: 1.6; margin-bottom: 1rem; border-left: 3px solid #dee2e6; padding-left: 15px;}
+    .part-title { font-size: 1.25rem; font-weight: bold; color: var(--color-guinda-oscuro); border-bottom: 2px solid var(--color-guinda); padding-bottom: 5px; margin-bottom: 15px;}
+
+    footer { background-color: #212529; color: #adb5bd; }
+  </style>
+</head>
+<body>
+
+<!-- Menú de Navegación -->
+<nav class="navbar navbar-expand-lg navbar-custom sticky-top py-3">
+  <div class="container">
+    <a class="navbar-brand fw-bold d-flex align-items-center" href="index.html">
+      <img src="https://i0.wp.com/sinodoluteranodemexico.org/wp-content/uploads/2023/09/foto-73.png?fit=6912%2C3456&ssl=1" alt="Logo Sínodo Luterano de México" class="navbar-logo me-3 bg-white rounded p-1">
+      Iglesia Luterana<br>San Pablo
+    </a>
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="fa-solid fa-bars text-white fs-3"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+
+        <!-- Menú Desplegable Nuestra Fe -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle fw-bold" href="#" id="navbarDropdownFe" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Nuestra Fe
+          </a>
+          <ul class="dropdown-menu shadow" aria-labelledby="navbarDropdownFe">
+            <li><a class="dropdown-item" href="creencias.html">Lo que creemos</a></li>
+            <li><a class="dropdown-item" href="credos.html">Credos</a></li>
+            <li><a class="dropdown-item fw-bold" href="catecismo.html">Catecismo menor</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item"><a class="nav-link" href="index.html#horarios">Horarios</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#contacto">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Header de la página -->
+<header class="page-header">
+  <div class="container">
+    <h1 class="display-5 fw-bold">El Catecismo Menor</h1>
+    <p class="lead mt-3">Escrito por el Dr. Martín Lutero (1529) como un manual básico para la enseñanza de la fe cristiana en el hogar.</p>
+  </div>
+</header>
+
+<!-- Contenido Principal -->
+<main class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-10">
+      <p class="text-center text-muted mb-5">
+        "Como el jefe de familia debe enseñarlo sencillamente a los de su casa". El Catecismo Menor resume las enseñanzas centrales de las Sagradas Escrituras en seis partes principales.
+      </p>
+
+      <!-- Acordeón del Catecismo -->
+      <div class="accordion shadow-sm" id="accordionCatecismo">
+
+        <!-- Parte 1: Los 10 Mandamientos -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingUno">
+            <button class="accordion-button fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapseUno" aria-expanded="true" aria-controls="collapseUno">
+              I. Los Diez Mandamientos
+            </button>
+          </h2>
+          <div id="collapseUno" class="accordion-collapse collapse show" aria-labelledby="headingUno" data-bs-parent="#accordionCatecismo">
+            <div class="accordion-body p-4 bg-light">
+              <h3 class="part-title">El Primer Mandamiento</h3>
+              <p><strong>No tendrás dioses ajenos delante de mí.</strong></p>
+              <p class="catecismo-q">¿Qué significa esto?</p>
+              <p class="catecismo-a">Debemos temer, amar y confiar en Dios sobre todas las cosas.</p>
+
+              <h3 class="part-title mt-4">El Segundo Mandamiento</h3>
+              <p><strong>No tomarás el nombre de Jehová tu Dios en vano.</strong></p>
+              <p class="catecismo-q">¿Qué significa esto?</p>
+              <p class="catecismo-a">Debemos temer y amar a Dios, de modo que no usemos su nombre para maldecir, jurar, practicar artes mágicas, mentir o engañar, sino que lo invoquemos en todas nuestras necesidades, y lo adoremos con oración, alabanza y acción de gracias.</p>
+
+              <h3 class="part-title mt-4">El Tercer Mandamiento</h3>
+              <p><strong>Acuérdate del día de reposo para santificarlo.</strong></p>
+              <p class="catecismo-q">¿Qué significa esto?</p>
+              <p class="catecismo-a">Debemos temer y amar a Dios, de modo que no menospreciemos la predicación ni su Palabra, sino que la consideremos santa, la oigamos y la aprendamos con gusto.</p>
+
+              <div class="alert alert-secondary mt-4 mb-0 text-center">
+                <em>(Y así sucesivamente para los restantes mandamientos que rigen nuestra relación con el prójimo: honrar a los padres, no matar, no cometer adulterio, no hurtar, no dar falso testimonio y no codiciar).</em>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Parte 2: El Credo -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingDos">
+            <button class="accordion-button collapsed fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDos" aria-expanded="false" aria-controls="collapseDos">
+              II. El Credo Apostólico
+            </button>
+          </h2>
+          <div id="collapseDos" class="accordion-collapse collapse" aria-labelledby="headingDos" data-bs-parent="#accordionCatecismo">
+            <div class="accordion-body p-4 bg-light">
+              <h3 class="part-title">El Primer Artículo: De la Creación</h3>
+              <p><strong>Creo en Dios Padre Todopoderoso, Creador del cielo y de la tierra.</strong></p>
+              <p class="catecismo-q">¿Qué significa esto?</p>
+              <p class="catecismo-a">Creo que Dios me ha creado a mí juntamente con todas las criaturas; que me ha dado mi cuerpo y mi alma, mis ojos, mis oídos y todos mis miembros, mi razón y todos mis sentidos, y aún los sostiene... Todo esto lo hace por pura gracia y bondad paternal y divina, sin mérito ni dignidad alguna de mi parte. Por todo esto, le debo dar gracias y alabarle, servirle y obedecerle. Esto es ciertamente verdad.</p>
+
+              <h3 class="part-title mt-4">El Segundo Artículo: De la Redención</h3>
+              <p><strong>Y en Jesucristo, su único Hijo, nuestro Señor...</strong></p>
+              <p class="catecismo-q">¿Qué significa esto?</p>
+              <p class="catecismo-a">Creo que Jesucristo, verdadero Dios, engendrado del Padre en la eternidad, y también verdadero hombre, nacido de la Virgen María, es mi Señor; quien me ha redimido a mí, criatura perdida y condenada, me ha comprado y librado de todos los pecados, de la muerte y del poder del diablo; no con oro ni con plata, sino con su santa y preciosa sangre, y con su inocente pasión y muerte...</p>
+
+              <h3 class="part-title mt-4">El Tercer Artículo: De la Santificación</h3>
+              <p><strong>Creo en el Espíritu Santo, la santa Iglesia cristiana...</strong></p>
+              <p class="catecismo-q">¿Qué significa esto?</p>
+              <p class="catecismo-a">Creo que ni por mi propia razón ni por mis propias fuerzas puedo creer en Jesucristo mi Señor, ni llegar a Él; sino que el Espíritu Santo me ha llamado por medio del Evangelio, me ha iluminado con sus dones, me ha santificado y guardado en la verdadera fe...</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Parte 3: El Padre Nuestro -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTres">
+            <button class="accordion-button collapsed fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTres" aria-expanded="false" aria-controls="collapseTres">
+              III. El Padre Nuestro
+            </button>
+          </h2>
+          <div id="collapseTres" class="accordion-collapse collapse" aria-labelledby="headingTres" data-bs-parent="#accordionCatecismo">
+            <div class="accordion-body p-4 bg-light">
+              <h3 class="part-title">La Introducción</h3>
+              <p><strong>Padre nuestro que estás en los cielos.</strong></p>
+              <p class="catecismo-q">¿Qué significa esto?</p>
+              <p class="catecismo-a">Con estas palabras Dios nos invita cariñosamente a creer que Él es nuestro verdadero Padre, y nosotros somos sus verdaderos hijos, para que le roguemos con toda seguridad y confianza, como hijos amados a su querido padre.</p>
+
+              <h3 class="part-title mt-4">Primera Petición</h3>
+              <p><strong>Santificado sea tu nombre.</strong></p>
+              <p class="catecismo-q">¿Qué significa esto?</p>
+              <p class="catecismo-a">El nombre de Dios, ciertamente, es santo en sí mismo; pero rogamos en esta petición que también sea santificado entre nosotros.</p>
+
+              <h3 class="part-title mt-4">Segunda Petición</h3>
+              <p><strong>Venga tu reino.</strong></p>
+              <p class="catecismo-q">¿Qué significa esto?</p>
+              <p class="catecismo-a">El reino de Dios ciertamente viene por sí mismo, sin nuestra oración; pero rogamos en esta petición que también venga a nosotros.</p>
+
+              <h3 class="part-title mt-4">Tercera Petición</h3>
+              <p><strong>Hágase tu voluntad, como en el cielo, así también en la tierra.</strong></p>
+              <p class="catecismo-q">¿Qué significa esto?</p>
+              <p class="catecismo-a">La buena y misericordiosa voluntad de Dios se hace ciertamente sin nuestra oración; pero rogamos en esta petición que también se haga entre nosotros.</p>
+
+              <h3 class="part-title mt-4">Cuarta Petición</h3>
+              <p><strong>El pan nuestro de cada día, dánoslo hoy.</strong></p>
+              <p class="catecismo-q">¿Qué significa esto?</p>
+              <p class="catecismo-a">Dios da el pan de cada día ciertamente sin nuestra oración, aun a todos los malos; pero rogamos en esta petición que nos haga reconocer esto y recibir nuestro pan de cada día con acción de gracias.</p>
+
+              <h3 class="part-title mt-4">Quinta Petición</h3>
+              <p><strong>Y perdónanos nuestras deudas, como también nosotros perdonamos a nuestros deudores.</strong></p>
+              <p class="catecismo-q">¿Qué significa esto?</p>
+              <p class="catecismo-a">Rogamos en esta petición que el Padre celestial no mire nuestros pecados ni nos niegue por causa de ellos lo que pedimos, porque no somos dignos de nada de lo que pedimos, ni lo hemos merecido; sino que nos lo dé todo por gracia, porque pecamos mucho a diario y no merecemos más que castigo. Así también nosotros perdonaremos de corazón y haremos bien con gusto a los que pecan contra nosotros.</p>
+
+              <h3 class="part-title mt-4">Sexta Petición</h3>
+              <p><strong>Y no nos metas en tentación.</strong></p>
+              <p class="catecismo-q">¿Qué significa esto?</p>
+              <p class="catecismo-a">Dios ciertamente no tienta a nadie; pero rogamos en esta petición que Dios nos guarde y preserve, para que el diablo, el mundo y nuestra propia carne no nos engañen ni nos seduzcan a una fe falsa, desesperación u otros grandes vicios y pecados; y que, si somos tentados por ellos, finalmente venzamos y retengamos la victoria.</p>
+
+              <h3 class="part-title mt-4">Séptima Petición</h3>
+              <p><strong>Mas líbranos del mal.</strong></p>
+              <p class="catecismo-q">¿Qué significa esto?</p>
+              <p class="catecismo-a">Rogamos en esta petición, en resumen, que el Padre celestial nos libre de todo mal de cuerpo y alma, de bienes y honra, y que finalmente, cuando llegue nuestra hora, nos conceda un fin bienaventurado, y por gracia nos lleve de este valle de lágrimas a sí mismo en el cielo.</p>
+
+              <h3 class="part-title mt-4">La Conclusión</h3>
+              <p><strong>Porque tuyo es el reino, y el poder, y la gloria, por todos los siglos. Amén.</strong></p>
+              <p class="catecismo-q">¿Qué significa "Amén"?</p>
+              <p class="catecismo-a">Que debo estar seguro de que estas peticiones son aceptables a nuestro Padre celestial y escuchadas por Él; porque Él mismo nos ha mandado orar así y ha prometido escucharnos. Amén, Amén, esto quiere decir: Sí, sí, así sea.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Parte 4: El Bautismo -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingCuatro">
+            <button class="accordion-button collapsed fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCuatro" aria-expanded="false" aria-controls="collapseCuatro">
+              IV. El Sacramento del Santo Bautismo
+            </button>
+          </h2>
+          <div id="collapseCuatro" class="accordion-collapse collapse" aria-labelledby="headingCuatro" data-bs-parent="#accordionCatecismo">
+            <div class="accordion-body p-4 bg-light">
+              <h3 class="part-title">La Naturaleza del Bautismo</h3>
+              <p class="catecismo-q">¿Qué es el Bautismo?</p>
+              <p class="catecismo-a">El Bautismo no es agua solamente, sino que es el agua comprendida en el mandato de Dios y unida a la Palabra de Dios. (Mateo 28:19)</p>
+
+              <h3 class="part-title mt-4">Los Beneficios del Bautismo</h3>
+              <p class="catecismo-q">¿Qué don o beneficio confiere el Bautismo?</p>
+              <p class="catecismo-a">Obra el perdón de los pecados, libra de la muerte y del diablo, y da la salvación eterna a todos los que lo creen, tal como las palabras y promesas de Dios lo declaran. (Marcos 16:16)</p>
+
+              <h3 class="part-title mt-4">El Poder del Bautismo</h3>
+              <p class="catecismo-q">¿Cómo puede el agua hacer cosas tan grandes?</p>
+              <p class="catecismo-a">Ciertamente no es el agua la que las hace, sino la Palabra de Dios que está con y en el agua, y la fe que confía en dicha Palabra de Dios en el agua. Porque sin la Palabra de Dios, el agua es simple agua y no es bautismo; pero con la Palabra de Dios, es un bautismo, es decir, un agua de vida, rica en gracia, y un lavamiento de regeneración en el Espíritu Santo.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Parte 5: La Confesión -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingCinco">
+            <button class="accordion-button collapsed fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCinco" aria-expanded="false" aria-controls="collapseCinco">
+              V. La Confesión y Oficio de las Llaves
+            </button>
+          </h2>
+          <div id="collapseCinco" class="accordion-collapse collapse" aria-labelledby="headingCinco" data-bs-parent="#accordionCatecismo">
+            <div class="accordion-body p-4 bg-light">
+              <h3 class="part-title">La Confesión</h3>
+              <p class="catecismo-q">¿Qué es la Confesión?</p>
+              <p class="catecismo-a">La confesión abarca dos partes: primero, confesar los pecados; segundo, recibir la absolución, es decir, el perdón, de parte del pastor como de Dios mismo, no dudando en absoluto, sino creyendo firmemente que de este modo los pecados son perdonados delante de Dios en el cielo.</p>
+
+              <h3 class="part-title mt-4">El Oficio de las Llaves</h3>
+              <p class="catecismo-q">¿Qué es el Oficio de las Llaves?</p>
+              <p class="catecismo-a">Es el poder especial que Cristo ha dado a su Iglesia en la tierra para perdonar los pecados a los pecadores arrepentidos, y retener los pecados a los que no se arrepienten, mientras no se arrepientan.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Parte 6: La Santa Cena -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingSeis">
+            <button class="accordion-button collapsed fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeis" aria-expanded="false" aria-controls="collapseSeis">
+              VI. El Sacramento del Altar
+            </button>
+          </h2>
+          <div id="collapseSeis" class="accordion-collapse collapse" aria-labelledby="headingSeis" data-bs-parent="#accordionCatecismo">
+            <div class="accordion-body p-4 bg-light">
+              <h3 class="part-title">La Naturaleza del Sacramento</h3>
+              <p class="catecismo-q">¿Qué es el Sacramento del Altar?</p>
+              <p class="catecismo-a">Es el verdadero cuerpo y la verdadera sangre de nuestro Señor Jesucristo, bajo el pan y el vino, instituido por Cristo mismo para que nosotros, los cristianos, lo comamos y lo bebamos.</p>
+
+              <h3 class="part-title mt-4">El Beneficio del Sacramento</h3>
+              <p class="catecismo-q">¿De qué sirve comer y beber así?</p>
+              <p class="catecismo-a">Esto se nos indica por estas palabras: "Dado y derramado por vosotros para el perdón de los pecados". Es decir, que mediante estas palabras, en el Sacramento se nos dan el perdón de los pecados, la vida y la salvación; porque donde hay perdón de pecados, hay también vida y salvación.</p>
+
+              <h3 class="part-title mt-4">Quién recibe dignamente el Sacramento</h3>
+              <p class="catecismo-q">¿Quién recibe dignamente este Sacramento?</p>
+              <p class="catecismo-a">Ayunar y prepararse corporalmente es ciertamente una buena disciplina externa; pero es verdaderamente digno y está bien preparado el que tiene fe en estas palabras: "Dado y derramado por vosotros para el perdón de los pecados". Pero el que no cree en estas palabras, o duda de ellas, es indigno y no está preparado, porque la palabra "por vosotros" exige corazones que verdaderamente crean.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Parte 7: Oraciones Diarias -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingSiete">
+            <button class="accordion-button collapsed fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSiete" aria-expanded="false" aria-controls="collapseSiete">
+              VII. Oraciones Diarias
+            </button>
+          </h2>
+          <div id="collapseSiete" class="accordion-collapse collapse" aria-labelledby="headingSiete" data-bs-parent="#accordionCatecismo">
+            <div class="accordion-body p-4 bg-light">
+              <h3 class="part-title">Bendición de la Mañana</h3>
+              <p class="text-muted fst-italic mb-2">Por la mañana, al levantarte, te santiguarás con la santa cruz y dirás:</p>
+              <p>En el nombre del Padre, y del Hijo, y del Espíritu Santo. Amén.</p>
+              <p class="catecismo-a">Te doy gracias, mi Padre celestial, por Jesucristo, tu amado Hijo, que me has guardado en esta noche de todo daño y peligro; y te ruego que me guardes también en este día de pecados y de todo mal, para que todos mis pensamientos, palabras y obras, y mi vida entera, te agraden; pues yo me encomiendo, junto con mi cuerpo y mi alma y todas las cosas, en tus manos. Que tu santo ángel esté conmigo, para que el enemigo malo no tenga ningún poder sobre mí. Amén.</p>
+
+              <h3 class="part-title mt-4">Bendición de la Noche</h3>
+              <p class="text-muted fst-italic mb-2">Por la noche, al acostarte, te santiguarás con la santa cruz y dirás:</p>
+              <p>En el nombre del Padre, y del Hijo, y del Espíritu Santo. Amén.</p>
+              <p class="catecismo-a">Te doy gracias, mi Padre celestial, por Jesucristo, tu amado Hijo, que me has guardado por tu gracia en este día; y te ruego que me perdones todos mis pecados en los que he obrado mal, y que me guardes por tu gracia en esta noche; pues yo me encomiendo, junto con mi cuerpo y mi alma y todas las cosas, en tus manos. Que tu santo ángel esté conmigo, para que el enemigo malo no tenga ningún poder sobre mí. Amén.</p>
+
+              <h3 class="part-title mt-4">Para antes de comer</h3>
+              <p class="catecismo-a">Los ojos de todos esperan en ti, oh Señor, y tú les das su comida a su tiempo. Abres tu mano, y colmas de bendición a todo ser viviente. (Salmo 145:15-16)<br><br><strong>Señor Dios, Padre celestial, bendícenos a nosotros y a estos tus dones, que recibimos de tu generosa bondad, por Jesucristo nuestro Señor. Amén.</strong></p>
+
+              <h3 class="part-title mt-4">Para después de comer</h3>
+              <p class="catecismo-a">Alabad a Jehová, porque es bueno; porque para siempre es su misericordia. Él da mantenimiento a los seres vivientes... (Salmo 136:1, 25)<br><br><strong>Te damos gracias, Señor Dios y Padre, por todos tus beneficios, por Jesucristo nuestro Señor, que vives y reinas por los siglos de los siglos. Amén.</strong></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Parte 8: La Tabla de Deberes -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOcho">
+            <button class="accordion-button collapsed fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOcho" aria-expanded="false" aria-controls="collapseOcho">
+              VIII. La Tabla de Deberes
+            </button>
+          </h2>
+          <div id="collapseOcho" class="accordion-collapse collapse" aria-labelledby="headingOcho" data-bs-parent="#accordionCatecismo">
+            <div class="accordion-body p-4 bg-light">
+              <p class="text-muted mb-4 fst-italic">Ciertos pasajes de la Escritura para los diversos estados y condiciones de los hombres, por los cuales son amonestados a cumplir con sus oficios y deberes.</p>
+
+              <h3 class="part-title">A los Obispos, Pastores y Predicadores</h3>
+              <p class="catecismo-a">Es necesario que el obispo sea irreprensible, marido de una sola mujer, sobrio, prudente, decoroso, hospedador, apto para enseñar; no dado al vino, no pendenciero, no codicioso de ganancias deshonestas, sino amable, apacible, no avaro; que gobierne bien su casa... no un neófito... retenga la palabra fiel tal como ha sido enseñada. (1 Timoteo 3:2-6; Tito 1:9)</p>
+
+              <h3 class="part-title mt-4">Lo que los oyentes deben a sus Pastores</h3>
+              <p class="catecismo-a">El Señor ordenó a los que anuncian el evangelio, que vivan del evangelio. (1 Corintios 9:14)<br>Obedeced a vuestros pastores, y sujetaos a ellos; porque ellos velan por vuestras almas, como quienes han de dar cuenta; para que lo hagan con alegría, y no quejándose. (Hebreos 13:17)</p>
+
+              <h3 class="part-title mt-4">Gobierno Civil</h3>
+              <p class="catecismo-a">Sométase toda persona a las autoridades superiores; porque no hay autoridad sino de parte de Dios, y las que hay, por Dios han sido establecidas. (Romanos 13:1)</p>
+
+              <h3 class="part-title mt-4">A los Ciudadanos</h3>
+              <p class="catecismo-a">Dad a César lo que es de César, y a Dios lo que es de Dios. (Mateo 22:21)</p>
+
+              <h3 class="part-title mt-4">A los Esposos y a las Esposas</h3>
+              <p class="catecismo-a">Maridos, vivid con ellas sabiamente, dando honor a la mujer como a vaso más frágil, y como a coherederas de la gracia de la vida, para que vuestras oraciones no tengan estorbo. (1 Pedro 3:7)<br><br>Las casadas estén sujetas a sus propios maridos, como al Señor. (Efesios 5:22)</p>
+
+              <h3 class="part-title mt-4">A los Padres y a los Hijos</h3>
+              <p class="catecismo-a">Padres, no provoquéis a ira a vuestros hijos, sino criadlos en la disciplina y amonestación del Señor. (Efesios 6:4)<br><br>Hijos, obedeced en el Señor a vuestros padres, porque esto es justo. Honra a tu padre y a tu madre. (Efesios 6:1-3)</p>
+
+              <h3 class="part-title mt-4">Para todos en general</h3>
+              <p class="catecismo-a text-center mt-3">
+                "Amarás a tu prójimo como a ti mismo. En estas palabras se resume toda la ley." (Romanos 13:9)<br><br>
+                <span class="fw-bold fst-italic">"Si cada uno aprende bien su lección,<br>habrá en la casa paz y bendición."</span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- Footer -->
+<footer class="py-4 text-center mt-5">
+  <div class="container">
+    <p class="mb-0">&copy; 2026 Iglesia Luterana San Pablo. Todos los derechos reservados.</p>
+    <small>Miembro del Sínodo Luterano de México.</small>
+  </div>
+</footer>
+
+<!-- Bootstrap 5 JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
